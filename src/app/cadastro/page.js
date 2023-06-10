@@ -5,23 +5,27 @@ import { useRouter } from 'next/navigation'
 
 export default function Cadastro() {
     const route = useRouter();
-    const [nome, setNome] = useState();
-    const [idade, setIdade] = useState();
-    const [uf, setUF] = useState();
+    const [titulo, setTitulo] = useState();
+    const [data_cadastro, setData_cadastro] = useState();
+    const [preco, setPreco] = useState();
+    const [descricao, setDescricao] = useState();
+    const [imagem, setImagem] = useState();
 
     const cadastrar = (e) => {
         e.preventDefault()
         
-        const pessoa = {
-            nome: nome,
-            idade: idade,
-            uf: uf
+        const produtos = {
+            titulo: titulo,
+            data_cadastro: data_cadastro,
+            preco: preco,
+            descricao: descricao,
+            imagem: imagem
         }
-        const pessoaJson = JSON.stringify(pessoa);
-        fetch("http://localhost:3003/pessoa", {
+        const produtosJson = JSON.stringify(produtos);
+        fetch("http://localhost:3003/produtos", {
             method: "POST",
             headers: { "content-Type": "application/json" },
-            body: pessoaJson
+            body: produtosJson
         }).then(function(){ route.push("/")}).catch(()=> console.log("Não foi possível cadastrar!"))
     }
 
@@ -30,9 +34,9 @@ export default function Cadastro() {
             <form  onSubmit={cadastrar}>
                 <input
                     type="text"
-                    placeholder='Nome:'
-                    nome="nome"
-                    onChange={e => setNome(e.target.value)}
+                    placeholder='Buscar Produto:'
+                    titulo="Digite o produto que deseja procurar..."
+                    onChange={e => setTitulo(e.target.value)}
                 /><br/>
                 <input
                     type="text"
