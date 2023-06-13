@@ -67,7 +67,7 @@ export default function Cadastro() {
 
                 <button type='submit'>Cadastrar</button>
                 <div>
-                    <a href='/'>Voltar</a>
+                    <a href='../produtos'>Voltar</a>
                 </div>
             </form>
         </div>
