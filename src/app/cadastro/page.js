@@ -31,42 +31,49 @@ export default function Cadastro() {
 
     return (
         <div className={styles.main}>
-            <form  onSubmit={cadastrar}>
-                <input
+            <form  onSubmit={cadastrar} className={styles.form}>
+            <h1>Cadastro de Produtos</h1>
+                <input className={styles.input}
                     type="text"
                     placeholder='Digite o titulo do produto desejado:'
                     titulo="Digite o produto que deseja procurar..."
                     onChange={e => setTitulo(e.target.value)}
-                /><br/>
+                />
+                <br/><br/>
                 <input
                     type="date"
                     placeholder='Digite a data do produto desejado:'
                     nome="Data"
                     onChange={e => setData_cadastro(e.target.value)}
-                /><br/>
-                <input
+                />
+                <br/><br/>
+                <input className={styles.input}
                     type="Real"
                     placeholder='Digite o preço do produto desejado:'
                     nome="Preco"
                     onChange={e => setPreco(e.target.value)}
-                /><br/>
+                />
+                <br/><br/>
 
-                    <input
+                    <input className={styles.input}
                     type="text"
                     placeholder='Digite a discrição do produto desejado:'
                     nome="Descrição"
                     onChange={e => setDescricao(e.target.value)}
-                /><br/>
+                />
+                <br/><br/>
 
-                    <input
+                    <input className={styles.input}
                     type="text"
                     placeholder='Digite a URL do produto desejado:'
                     nome="Preco"
                     onChange={e => setImagem(e.target.value)}
-                /><br/>
+                />
+                <br/><br/>
 
-                <button type='submit'>Cadastrar</button>
+                <button type='submit'>Cadastrar Produto</button>
                 <div>
+                <br/>
                     <a href='../produtos'>Voltar</a>
                 </div>
             </form>

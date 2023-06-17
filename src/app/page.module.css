@@ -1,8 +1,27 @@
 
 .main {
+  
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: rgb(14, 86, 110);
  }
- 
+ .form {
+  background-color: grey;
+  font-family: 'Courier New', Courier, monospace;
+  width: 500px;
+  height: 400px;
+  padding-top: 50px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 20%;
+  border-width: 10px; 
+  border-style: solid; 
+  border-color:  rgb(29, 28, 28);
+ }
+.input {
+  width: 300px;
+  height: 20px;
+  border-radius: 5%;
+}
