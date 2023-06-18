@@ -22,7 +22,7 @@ export default function Cadastro() {
             imagem: imagem
         }
         const produtosJson = JSON.stringify(produtos);
-        fetch("http://localhost:3003/produtos", {
+        fetch("http://localhost:3000/produtos", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: produtosJson
@@ -40,7 +40,7 @@ export default function Cadastro() {
                     onChange={e => setTitulo(e.target.value)}
                 />
                 <br/><br/>
-                <input
+                <input className={styles.data_cadastro}
                     type="date"
                     placeholder='Digite a data do produto desejado:'
                     nome="Data"

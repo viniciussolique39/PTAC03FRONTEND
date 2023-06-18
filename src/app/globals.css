@@ -1,0 +1,14 @@
+body{
+     font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(20,147,220), rgb(17, 54, 71));
+    text-align: center;
+}
+.cadastro{
+     top: -20px;
+     font-size: 12px;
+     color: dodgerblue;
+      top: 0px;
+      left: 0px;
+      pointer-events: none;
+      transition: .5s;
+}

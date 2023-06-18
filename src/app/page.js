@@ -1,5 +1,7 @@
 "use client"
+
 import Link from 'next/link';
+import './globals.css'
 
 export default async function Home() {
 
@@ -9,9 +11,8 @@ export default async function Home() {
   const produtos = await req.json();
 
   return (
-    <style>
       
-    <main> <Link href="/cadastro" className='voltar'> CADASTRAR </Link>
+    <main> <Link href="/cadastro" className='cadastro'> CADASTRAR </Link>
 
       {produtos.map(produtos => (
         <div key={produtos.codigo}>
@@ -25,6 +26,5 @@ export default async function Home() {
         </div>
       ))}
     </main>
-    </style>
   )
 }
