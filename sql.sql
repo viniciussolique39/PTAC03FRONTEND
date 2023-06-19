@@ -1,3 +1,5 @@
+/*01 - CRIAÇÃO DA  TABELA PRODUTO*/
+
 CREATE TABLE produtos (
 codigo SERIAL PRIMARY KEY, 
 titulo TEXT NOT NULL, 
@@ -6,6 +8,9 @@ preco FLOAT,
 descricao TEXT NOT NULL, 
 imagem TEXT NOT NULL
 )
+
+/*02 - 20 INSERÇÕES DE PRODUTO (INSERT INTO)*/
+
 
 INSERT INTO produtos (titulo, data_cadastro, preco, descricao, imagem)
 VALUES 
@@ -18,3 +23,21 @@ VALUES
 ('Geonav Cabo Micro USB', '20230622',24.21, 'Geonav Cabo Micro USB, nylon trançado, para dispositivo Android e acessórios, 1,5 MT, MIC15T, Cinza','https://m.media-amazon.com/images/I/71DSeYXsIpL._AC_SX569_.jpg'),
 ('Adaptador de Ethernet da Amazon para Fire TV', '20230923', 119.00, 'Adaptador de Ethernet da Amazon para Fire TV','https://m.media-amazon.com/images/I/31OI2+BqVDL._AC_.jpg'),
 ('Clamper Energia 5 Tomadas', '20231025', 50.00, 'Clamper Energia 5 Tomadas','https://m.media-amazon.com/images/I/51C9M7zl-5L._AC_SX522_.jpg')
+
+/*03 - CÓDIGO PARA MOSTRAR TODOS PRODUTOS CADASTRO*/
+
+SELECT * FROM produtos
+
+/*04 - CONSULTA PARA MOSTRAR UM PRODUTO DE CÓDIGO (ID)*/
+
+SELECT * FROM produtos WHERE codigo = 7
+
+/*05 - CONSULTA PARA REMOVER UM PRODUTO DE CÓDIGO ESPECÍFICO*/
+
+DELETE FROM produtos WHERE codigo = 10
+
+/*06- CONSULTA PARA INSERIR UM PRODUTO COM OS DADOS QUE O USUÁRIO DIGITOU NO FORMULÁRIO*/
+
+INSERT INTO produtos (titulo, data_cadastro, preco, descricao, imagem)
+VALUES ('Jaqueta Bobojaco', '20231125', 200.00, 'aqueta Bobojaco','https://m.media-amazon.com/images/I/51C9M7zl-5L._AC_SX522_.jpg')
+
