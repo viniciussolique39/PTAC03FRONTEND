@@ -53,7 +53,7 @@ export default function Cadastro() {
                     nome="Preco"
                     onChange={e => setPreco(e.target.value)}
                 />
-                <br/><br/><br/>
+                <br/><br/>
 
                     <input className={styles.input}
                     type="text"
