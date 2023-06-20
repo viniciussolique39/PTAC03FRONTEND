@@ -66,7 +66,7 @@ export default function Cadastro() {
                     <input className={styles.input}
                     type="text"
                     placeholder='Digite a URL do produto desejado:'
-                    nome="Preco"
+                    nome="URL"
                     onChange={e => setImagem(e.target.value)}
                 />
                 <br/><br/>
