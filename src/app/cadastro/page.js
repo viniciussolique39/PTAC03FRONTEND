@@ -31,7 +31,7 @@ export default function Cadastro() {
 
     return (
         <div className={styles.main}>
-            <form  onSubmit={cadastrar} className={styles.form}>
+            <form  onSubmit={cadastrar}>
             <h1>Cadastro de Produtos</h1>
                 <input className={styles.input}
                     type="text"
@@ -71,7 +71,7 @@ export default function Cadastro() {
                 />
                 <br/><br/>
 
-                <button type='submit'>Cadastrar Produto</button>
+                <button type='submit'>Cadastrar produtos</button>
                 <div>
                 <br/>
                     <a href='../produtos'>Voltar</a>

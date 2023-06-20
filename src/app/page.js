@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
       
-    <main> <Link href="/cadastro" className='cadastro'> CADASTRAR </Link>
+    <main> <Link href="/cadastro"> CADASTRAR </Link>
 
       {produtos.map(produtos => (
         <div key={produtos.codigo}>
